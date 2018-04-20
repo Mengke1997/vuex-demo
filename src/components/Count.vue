@@ -1,6 +1,6 @@
 <template>
      <div>
-          <h4>count:{{$store.state.count}}</h4>
+          <h4>count:{{$store.state.count.count}}</h4>
           <button @click='decrement'>-</button>
           <span></span>
           <button @click='increment'>+</button>
@@ -17,11 +17,6 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-    data(){
-      return{
-        // historyArr:{{$store.state.historyArr}}
-      }
-    },
     computed:mapGetters([
         'evenOrOdd',
         'historyArr'

@@ -10,10 +10,8 @@
 </template>
 
 <script>
-import store from './vuex/store.js';
 export default {
     name: "app",
-    store,
     components: {}
 };
 </script>

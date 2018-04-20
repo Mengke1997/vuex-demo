@@ -1,7 +1,3 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-Vue.use(Vuex);
-
 const state = {
     count: 1,
     historyArr:[]
@@ -42,9 +38,9 @@ const getters={
     historyArr:state=>state.historyArr.slice(-5)
 };
 
-export default new Vuex.Store({
+export default {
     state,
     mutations,
     actions,
     getters
-});
+};

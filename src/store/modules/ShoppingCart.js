@@ -73,7 +73,6 @@ const actions = {
         // 增加库存
         commit('addProductNum',obj.id);
         // 金额变化
-        // var price=;
         commit('totalChange',-(state.goods[obj.id-1].price));
     },
     // 结算

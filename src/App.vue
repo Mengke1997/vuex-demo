@@ -4,7 +4,11 @@
     <hr/>
     <router-link to='/count'>加减</router-link>
     <span></span>
-    <router-link to='/Shopping'>购物车</router-link>
+    <router-link to='/shopping'>购物车</router-link>
+    <span></span>
+    <router-link to='/todo'>todo</router-link>
+    <span></span>
+    <router-link to='/chat'>chat</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -16,7 +20,7 @@ export default {
 };
 </script>
 
-<style>
+<style scope>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

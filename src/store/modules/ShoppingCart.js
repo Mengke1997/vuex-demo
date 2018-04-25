@@ -41,7 +41,7 @@ const mutations = {
         state.cart[idx].quantity--;
     },
     decrementCart(state,idx){
-        state.cart.splice(idx);
+        state.cart.splice(idx,1);
     },
     addProductNum(state,id){
         state.goods.find(cartItem=>cartItem.id===id).num++;

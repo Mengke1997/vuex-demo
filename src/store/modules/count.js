@@ -19,10 +19,8 @@ const mutations={
         }
     },
     incrementAsync(state){
-        setTimeout(function(){
-            state.count++;  
-            state.historyArr.push('increment');  
-        },1000);
+        state.count++;  
+        state.historyArr.push('increment');
     }
 };
 
@@ -30,7 +28,11 @@ const actions={
     increment:({commit})=>commit('increment'),
     decrement:({commit})=>commit('decrement'),
     incrementIfOdd:({commit})=>commit('incrementIfOdd'),
-    incrementAsync:({commit})=>commit('incrementAsync')
+    incrementAsync:({commit})=>{      
+        setTimeout(function(){
+            commit('incrementAsync');  
+        },1000);
+    }
 };
 
 const getters={

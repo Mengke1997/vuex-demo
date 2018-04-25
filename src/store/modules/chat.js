@@ -44,8 +44,7 @@ const state = {
             name: '郑梦柯3'
         },]
     ],
-    tab: 0,
-    count:123
+    tab: 0
 };
 
 const actions = {

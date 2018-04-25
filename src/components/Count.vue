@@ -4,8 +4,8 @@
           <button @click='decrement'>-</button>
           <span></span>
           <button @click='increment'>+</button>
-          <h5>奇偶数：{{evenOrOdd}}</h5>
-          <span>判断奇偶数：</span>
+          <h5>判断奇偶数：{{evenOrOdd}}</h5>
+          <span>变为偶数</span>
           <button @click='incrementIfOdd'>incrementIfOdd</button>
           <span>异步：</span>
           <button @click='incrementAsync'>异步</button>

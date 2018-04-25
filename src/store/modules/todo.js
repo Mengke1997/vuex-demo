@@ -25,12 +25,19 @@ let filter = {
 const mutations = {
     // 点击改变全部
     toggleAllComplete: (state) => {
-        state.pointChange = !state.pointChange;
+        console.log(state.change);
+        // state.pointChange = !state.pointChange;
+        if (!state.change) {
+            this.pointChange = true;
+        }else{
+            this.pointChange = false;
+        }   
         state.todos = state.todos.map(val => {
-            val.completed = state.change;
+            val.completed = this.pointChange;
             return val;
         });
-        state.change = !state.change;
+        state.change = this.pointChange;
+
     },
     // 处理记录的状态：未完成和已完成
     toggleTodo: (state, id) => {
@@ -77,21 +84,21 @@ const actions = {
     },
     // 点击出现未完成
     toggleFilter: ({ commit }, filter) => {
-        commit('toggleFilter',filter);
+        commit('toggleFilter', filter);
     }
 };
 
 const getters = {
-    num:state=>state.todos.length,
-    pointChange:state=>{
-        const isFlag = state.todos.some(val=>val.completed === false);
-        if(isFlag){
-            return  false;
-        }else{
+    num: state => state.todos.length,
+    pointChange: state => {
+        const isFlag = state.todos.some(val => val.completed === false);
+        if (isFlag) {
+            return false;
+        } else {
             return true;
         }
     },
-    allTodos: function(state) {
+    allTodos: function (state) {
         return filter[state.tag](state.todos);
     }
 };
